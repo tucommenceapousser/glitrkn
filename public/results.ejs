@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GLIT - OSINT Git by Trhacknon</title>
+    <style>
+        /* Votre CSS personnalisé pour l'interface */
+    </style>
+</head>
+<body>
+    <h1>GLIT - OSINT Git by Trhacknon</h1>
+
+    <h2>Results:</h2>
+    <ul>
+        <% results.forEach(function(result) { %>
+            <li>
+                <strong>Repository:</strong> <%= result.repository %><br>
+                <strong>Emails:</strong> <%= result.emails.join(", ") %>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

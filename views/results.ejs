@@ -1,0 +1,82 @@
+<!-- results.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GLIT - OSINT Git by Trhacknon</title>
+    <style>
+        /* CSS personnalisé pour l'interface */
+        body {
+            background-color: #f7f7f7;
+            color: #333333;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            margin: 40px 0;
+            color: #ff99cc;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ff99cc;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #cccccc;
+            animation: fadeInUp 1s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        strong {
+            color: #ff99cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>GLIT - OSINT Git by Trhacknon</h1>
+
+    <h2>Results:</h2>
+    <ul>
+        <% results.forEach(function(result) { %>
+            <li>
+                <strong>Repository:</strong> <%= result.repository %><br>
+                <strong>Emails:</strong> <%= result.emails.join(", ") %>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

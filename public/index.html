@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GLIT - OSINT Git by Trhacknon</title>
+  <style>
+    body {
+      background-color: #ff99cc;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #333333;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="url"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    input[type="checkbox"] {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      background-color: #ffffff;
+      color: #ff99cc;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .banner {
+      margin-top: 80px;
+      font-size: 24px;
+      font-family: 'Arial Narrow', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>GLIT - OSINT Git by Trhacknon</h1>
+
+  <form method="POST" action="/search">
+    <label for="userUrl">GitHub URL:</label>
+    <input type="url" name="userUrl" id="userUrl" placeholder="Enter the GitHub URL" required>
+
+    <label for="allBranches">Get all branches:</label>
+    <input type="checkbox" name="allBranches" id="allBranches">
+
+    <label for="saveToFile">Save results to file:</label>
+    <input type="checkbox" name="saveToFile" id="saveToFile">
+
+    <input type="submit" value="Search">
+  </form>
+
+  <div class="banner">
+    <pre>
+      _______  _     _  _______  _       
+     (_______)(_)   (_)(_______)(_)      
+      _______  _     _  _        _   ___ 
+     |  ___  || |   | || |      | | /___)
+     | |   | || |___| || |_____ | ||___ |
+     |_|   |_| \_____/ (_______/ |_|(___/ 
+    </pre>
+  </div>
+</body>
+</html>
